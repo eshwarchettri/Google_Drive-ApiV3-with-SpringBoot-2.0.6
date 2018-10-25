@@ -1,0 +1,146 @@
+ERROR  : 12:34:26: ERROR:  syntax error at or near "user"
+LINE 1: select * from jhi user;
+                          ^
+ERROR  : 12:06:32: ERROR:  syntax error at or near "1"
+LINE 1: insert into ne_users(1, 'admin','admin',1,1);
+                             ^
+ERROR  : 12:08:12: ERROR:  syntax error at or near "0"
+LINE 1: insert into ne_users(0, 'admin','admin',1,1);
+                             ^
+ERROR  : 12:08:23: ERROR:  syntax error at or near "'admin'"
+LINE 1: insert into ne_users('admin','admin',1,1);
+                             ^
+ERROR  : 12:11:02: ERROR:  syntax error at or near "table"
+LINE 1: update table ne_users set user_id = 1 where username = 'eshw...
+               ^
+ERROR  : 12:50:59: ERROR:  relation "ne_user" does not exist
+LINE 1: select * from ne_user;
+                      ^
+ERROR  : 12:51:04: ERROR:  relation "ne_client_details" does not exist
+LINE 1: select * from ne_client_details;
+                      ^
+ERROR  : 13:01:19: ERROR:  table "ne_email_stats" does not exist
+ERROR  : 13:16:51: ERROR:  relation "ne_client_details" does not exist
+LINE 1: select * from ne_client_details;
+                      ^
+ERROR  : 14:36:47: ERROR:  syntax error at or near "from"
+LINE 1: delete from from ne_email_stats WHERE client_id = 21;
+                    ^
+ERROR  : 16:59:41: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+ERROR  : 16:59:50: could not connect to server: Connection refused
+	Is the server running on host "192.168.0.243" and accepting
+	TCP/IP connections on port 5432?
+ERROR  : 16:59:57: could not connect to server: Connection refused
+	Is the server running on host "192.168.0.243" and accepting
+	TCP/IP connections on port 5432?
+ERROR  : 17:00:18: could not connect to server: Connection refused
+	Is the server running on host "192.168.0.243" and accepting
+	TCP/IP connections on port 5432?
+ERROR  : 17:00:59: Error: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+ERROR  : 17:01:04: Error: Failed to re-establish the connection to the server postgres on appuser@192.168.0.243:5432
+ERROR  : 15:58:26: ERROR:  column "login_date" does not exist
+LINE 7:   AND login_date <  '15/08/18'
+              ^
+ERROR  : 16:02:57: ERROR:  syntax error at or near "+"
+LINE 7: ...t_id=13 UNION ALL (SELECT '09/08/18' + INTERVAL a + b DAY AS...
+                                                             ^
+ERROR  : 16:03:39: ERROR:  syntax error at or near "+"
+LINE 7: ...t_id=13 UNION ALL (SELECT '09/08/18' + INTERVAL a + b DAY AS...
+                                                             ^
+ERROR  : 17:10:48: ERROR:  operator does not exist: character varying >= integer
+LINE 1: ... * from ne_email_stats where client_id=13and date between 09...
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+ERROR  : 17:11:00: ERROR:  operator does not exist: character varying >= integer
+LINE 1: ...* from ne_email_stats where client_id=13 and date between 09...
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+ERROR  : 17:11:29: ERROR:  operator does not exist: character varying >= integer
+LINE 1: ...* from ne_email_stats where client_id=13 and date >= 09/08/1...
+                                                             ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+ERROR  : 17:30:28: ERROR:  syntax error at or near "+"
+LINE 1: .../08/18' UNION ALL (SELECT '09/08/18' + INTERVAL a + b DAY AS...
+                                                             ^
+ERROR  : 17:44:21: ERROR:  syntax error at or near "COALESCE"
+LINE 3: COALESCE(a,0) + COALESCE(b,0) DAY AS date, 0 AS orders,0 AS ...
+        ^
+ERROR  : 11:40:11: ERROR:  syntax error at or near "("
+LINE 1: ...s,aov,cpc,cpo,ctr,cvr,rbyc,sessions,budget to_date(date, 'YY...
+                                                             ^
+ERROR  : 11:41:04: ERROR:  syntax error at or near "date_trunc"
+LINE 3: date_trunc('day', dd):: date as date FROM generate_series( '...
+        ^
+ERROR  : 11:41:29: ERROR:  each UNION query must have the same number of columns
+LINE 2: '2018-08-01' and '2018-08-31' UNION ALL select 0 as impressi...
+                                                       ^
+ERROR  : 12:24:06: ERROR:  date/time field value out of range: "13/08/18"
+LINE 3: ...c('day', dd):: date as date FROM generate_series( '13/08/18'...
+                                                             ^
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR  : 12:56:20: ERROR:  syntax error at or near ":"
+LINE 3: ...nerate_series( '2018-08-13', '2018-08-19', '1 day':interval)...
+                                                             ^
+ERROR  : 13:29:45: ERROR:  syntax error at or near "\"
+LINE 1: ...-08-13', timestamp '2018-08-19', interval '1 day')\:\:date) ...
+                                                             ^
+ERROR  : 13:46:02: ERROR:  syntax error at or near "ate"
+LINE 1: ate ne_email_stats set date='2018-08-16' where date='03/08/1...
+        ^
+ERROR  : 14:01:50: ERROR:  syntax error at or near ","
+LINE 1: update ne_email_stats set aov,budget,cpc,ctr,cvr values=(23....
+                                     ^
+ERROR  : 14:33:08: ERROR:  syntax error at or near "\"
+LINE 7: ...-08-13', timestamp '2018-08-19', interval '1 day')\:\:date) ...
+                                                             ^
+ERROR  : 10:43:16: ERROR:  relation "ne_user" does not exist
+LINE 1: select * from ne_user;
+                      ^
+ERROR  : 10:43:21: ERROR:  relation "ne_users" does not exist
+LINE 1: select * from ne_users;
+                      ^
+ERROR  : 10:43:30: ERROR:  relation "ne_users" does not exist
+LINE 1: select * from ne_users;
+                      ^
+ERROR  : 10:44:04: ERROR:  relation "ne_user" does not exist
+LINE 1: select * from ne_user;
+                      ^
+ERROR  : 10:44:28: ERROR:  relation "ne_user" does not exist
+LINE 1: select * from ne_user;
+                      ^
+ERROR  : 15:03:26: ERROR:  date/time field value out of range: "28-07-2018"
+LINE 10: (SELECT generate_series(timestamp '28-07-2018', timestamp '2...
+                                           ^
+HINT:  Perhaps you need a different "datestyle" setting.
+ERROR  : 16:03:26: ERROR:  could not open relation with OID 13
+ERROR  : 16:04:12: ERROR:  could not open relation with OID 13
+ERROR  : 16:07:12: ERROR:  syntax error at or near ")"
+LINE 1: select nextval(S_NO)) as S_NO, 13 as client_id,'present' as ...
+                            ^
+ERROR  : 16:12:45: ERROR:  column "row_number" does not exist
+LINE 1: SELECT row_number, generate_series(timestamp '2018-07-28', t...
+               ^
+ERROR  : 16:13:01: ERROR:  window function call requires an OVER clause
+LINE 1: SELECT row_number(), generate_series(timestamp '2018-07-28',...
+               ^
+ERROR  : 15:27:50: ERROR:  update or delete on table "ne_user" violates foreign key constraint "fkn9hernfl282qnmiod6j0m9jfe" on table "user_role"
+DETAIL:  Key (id)=(11) is still referenced from table "user_role".
+ERROR  : 15:36:06: ERROR:  syntax error at or near "*"
+LINE 1: delete * from ne_client_details ;
+               ^
+ERROR  : 16:37:00: ERROR:  syntax error at or near "\"
+LINE 6: ...-09-12', timestamp '2018-09-18', interval '1 day')\:\:date) ...
+                                                             ^
+ERROR  : 16:38:23: ERROR:  syntax error at or near "\"
+LINE 6: ...-09-12', timestamp '2018-09-18', interval '1 day')\:\:date) ...
+                                                             ^
+ERROR  : 16:38:41: ERROR:  syntax error at or near ":"
+LINE 6: ...-09-12', timestamp '2018-09-18', interval '1 day'):\:date) d...
+                                                             ^
+ERROR  : 14:46:12: ERROR:  syntax error at or near "\"
+LINE 6: ...-06-10', timestamp '2018-06-16', interval '1 day')\:\:date) ...
+                                                             ^

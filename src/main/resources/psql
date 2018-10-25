@@ -1,0 +1,11 @@
+﻿select * from ne_email_stats ;
+DELETE
+FROM
+    ne_email_stats a
+        USING ne_email_stats b
+WHERE
+    a.s_no < b.s_no
+    AND a.date = b.date;
+
+    
+    
