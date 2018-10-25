@@ -8,7 +8,7 @@ This project allows users to download files, upload files , create folder and up
   Google Drive v3 with OAuth based authentication
   
 # Steps followed to create this project
-   1. Create new project in google console ny logging in to https://console.developes.google.com 
+   1. Create new project in google console ny logging in to https://console.developers.google.com 
    2. Choose OAUTH for credentials 
    3. Download the credentials file which will be in .json format add place it to src/main/resource/key folder
 
