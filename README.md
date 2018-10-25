@@ -10,5 +10,5 @@ This project allows users to download files, upload files , create folder and up
 # Steps followed to create this project
    1. Create new project in google console ny logging in to https://console.developers.google.com 
    2. Choose OAUTH for credentials 
-   3. Download the credentials file which will be in .json format add place it to src/main/resource/key folder
+   3. Download the credentials file which will be in .json format and place it to src/main/resource/key folder
 
