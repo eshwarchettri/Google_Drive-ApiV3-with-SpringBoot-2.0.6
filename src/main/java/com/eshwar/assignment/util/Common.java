@@ -5,7 +5,6 @@
  */
 package com.eshwar.assignment.util;
 
-import static com.cloudelements.assignment.controllers.HomePageController.MAX_FILE_SIZE;
 import com.google.api.client.http.HttpResponse;
 import com.google.api.client.util.IOUtils;
 import com.google.api.services.drive.Drive;
