@@ -1,6 +1,5 @@
 package com.eshwar.assignment;
 
-import com.eshwar.assignment.AssignmentApplication;
 import com.eshwar.assignment.controllers.HomePageController;
 import java.io.File;
 import java.io.FileInputStream;
