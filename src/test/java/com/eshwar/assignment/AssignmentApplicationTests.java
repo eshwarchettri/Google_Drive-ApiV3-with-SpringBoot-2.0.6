@@ -1,7 +1,7 @@
 package com.eshwar.assignment;
 
-import com.cloudelements.assignment.AssignmentApplication;
-import com.cloudelements.assignment.controllers.HomePageController;
+import com.eshwar.assignment.AssignmentApplication;
+import com.eshwar.assignment.controllers.HomePageController;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
