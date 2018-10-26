@@ -45,10 +45,6 @@ public class HomePageService {
         long size = f.length();
         String zippedFileName = "";
         boolean zipped = false;
-//        if (size > MAX_FILE_SIZE) {
-//            zippedFileName = compressFile(repFilePath, repFileName);
-//            zipped = true;
-//        }
         response.setHeader("Cache-Control", "private, max-age=15");
         if (zipped) {
             response.setContentType("application/zip");
@@ -87,36 +83,7 @@ public class HomePageService {
         }
     }
 
-    public static String compressFile(String filePath, String fileName) {
-        String file = "";
-        try {
-            java.io.File f = new java.io.File(filePath + fileName.substring(0, fileName.lastIndexOf(".")) + ".zip");
-            FileOutputStream fos = new FileOutputStream(f);
-            BufferedInputStream sourceStream;
-            try (ZipOutputStream targetStream = new ZipOutputStream(fos)) {
-                targetStream.setMethod(ZipOutputStream.DEFLATED);
-                FileInputStream fis = new FileInputStream(filePath + fileName);
-                sourceStream = new BufferedInputStream(fis);
-                ZipEntry theEntry = new ZipEntry(fileName);
-                targetStream.putNextEntry(theEntry);
-                byte[] data = new byte[1024];
-                int bCnt;
-                while ((bCnt = sourceStream.read(data, 0, 1024)) != -1) {
-                    targetStream.write(data, 0, bCnt);
-                }
-                targetStream.flush();
-                targetStream.closeEntry();
-            }
-            sourceStream.close();
-            file = fileName.substring(0, fileName.lastIndexOf(".")) + ".zip";
-        } catch (IOException exce) {
-            System.out.println("IOException while compressing file " + exce);
-            file = null;
-        }
-        return file;
-    }
-
-    public static String compressAllFiles(String[] filePath, String zipFileName, String appPath) {
+     public static String compressAllFiles(String[] filePath, String zipFileName, String appPath) {
         String zipFilePath = null;
         try {
             byte[] buffer = new byte[2048];
