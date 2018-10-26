@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cloudelements.assignment.controllers;
+package com.eshwar.assignment.controllers;
 
-import com.cloudelements.assignment.services.HomePageService;
+import com.eshwar.assignment.services.HomePageService;
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeRequestUrl;
